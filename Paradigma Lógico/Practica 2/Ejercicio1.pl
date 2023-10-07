@@ -21,11 +21,11 @@ ruta_corta(Ini, Fin,Ruta,Peso):-
     findall([R,P],ruta(Ini,Fin,R,P),Rutas),
     menor(Rutas,[Ruta,Peso]).
 menor([[Ruta, Peso]],[Ruta,Peso]).
-menor([[R1,P1]|Resto],[R2,P2]):-
-    menor(Resto,[R2,P2]),
-    P1>=P2.
-menor([[R1,P1]|Resto],[R1,P1]):-
-    menor(Resto,[_,P2]),
-    P1<P2.
+menor([[Ruta1,Peso1]|Resto],[Ruta2,Peso2]):-
+    menor(Resto,[Ruta2,Peso2]),
+    Peso1>=Peso2.
+menor([[Ruta1,Peso1]|Resto],[Ruta1,Peso1]):-
+    menor(Resto,[_,Peso2]),
+    Peso1<Peso2.
 
 %Consulta: ruta_corta(i,f,Ruta,Peso).
