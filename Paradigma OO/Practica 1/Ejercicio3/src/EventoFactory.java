@@ -1,8 +1,7 @@
 public class EventoFactory implements AgendaFactory {
     @Override
     public Contacto crearContacto(String nombre, String apellido, String telefono, int edad, String detalles) {
-        // Implement the creation of Contacto for EventoFactory if needed
-        return null; // Return a default value
+        return null;
     }
 
     @Override
